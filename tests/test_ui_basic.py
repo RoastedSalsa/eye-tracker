@@ -510,7 +510,6 @@ def test_tray_menu_layout(controller: FakeController, cleanup: list[Any]) -> Non
         "Camera preview…",
         "Settings…",
         "Start at login",
-        "Check for updates…",
         "About Eye Tracker",
         "Quit Eye Tracker",
     ]

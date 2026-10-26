@@ -387,18 +387,6 @@ class LearningSettings:
 
 
 @dataclass
-class UpdateSettings:
-    check: bool = _opt(
-        False,
-        doc="Look for a newer release once a day and say so in the tray menu. Off by default: "
-        "this is the only thing the app ever sends over the network, one HTTPS request to "
-        "api.github.com that carries no identifier (see docs/privacy.md). It never installs "
-        "anything without asking. Checking by hand (tray menu) works with this off. Windows "
-        "only for now.",
-    )
-
-
-@dataclass
 class UISettings:
     show_gaze_overlay: bool = _opt(False, doc="Draw a dot where you are looking (testing aid).")
 
@@ -415,7 +403,6 @@ class Settings:
     privacy: PrivacySettings = field(default_factory=PrivacySettings)
     hotkeys: HotkeySettings = field(default_factory=HotkeySettings)
     learning: LearningSettings = field(default_factory=LearningSettings)
-    updates: UpdateSettings = field(default_factory=UpdateSettings)
     ui: UISettings = field(default_factory=UISettings)
 
     # ------------------------------------------------------------------ helpers

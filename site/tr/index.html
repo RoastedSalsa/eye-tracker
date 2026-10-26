@@ -174,7 +174,7 @@
           <div class="prop"><dt>CPU, tüm makine</dt><dd><strong>%0,55</strong>tek çekirdeğin %8,8'i</dd></div>
           <div class="prop"><dt>Bellek</dt><dd><strong>~200 MB</strong>kullanımda</dd></div>
           <div class="prop"><dt>Kare başına analiz</dt><dd><strong>11 ms</strong>yüz, irisler, baş pozu</dd></div>
-          <div class="prop"><dt>Ağ bağlantısı</dt><dd><strong>0</strong>güncelleme kontrolünü açmadıkça</dd></div>
+          <div class="prop"><dt>Ağ bağlantısı</dt><dd><strong>0</strong>telemetri ve güncelleme kontrolü olmadan</dd></div>
           <div class="prop"><dt>Yüz noktası</dt><dd><strong>478</strong>iki iris dahil</dd></div>
           <div class="prop"><dt>Kalibrasyon</dt><dd><strong>~15 sn</strong>monitör başına</dd></div>
         </dl>
@@ -264,7 +264,7 @@
           </div>
         </div>
         <ul class="rows joined">
-          <li class="row"><svg aria-hidden="true"><use href="#i-shield"/></svg><div><strong>Ağ erişimi</strong><p>Telemetri ve hesap yok. Ağı kullanabilen tek şey, kendinizin açtığınız güncelleme kontrolüdür (varsayılan olarak kapalı). Kaynak kodda ve paketlenen her kütüphanede başka bir ağ kodu bulunursa CI başarısız olur.</p></div><span class="value"><strong>Varsayılan olarak yok</strong></span></li>
+          <li class="row"><svg aria-hidden="true"><use href="#i-shield"/></svg><div><strong>Ağ erişimi</strong><p>Telemetri ve hesap yok. Kaynak kodda ve paketlenen her kütüphanede bir ağ kodu bulunursa CI başarısız olur.</p></div><span class="value"><strong>Yok</strong></span></li>
           <li class="row"><svg aria-hidden="true"><use href="#i-camera"/></svg><div><strong>Kamera kareleri</strong><p>Birkaç milisaniye bellekte analiz edilir ve asla diske yazılmaz.</p></div><span class="value"><strong>Saklanmaz</strong></span></li>
           <li class="row"><svg aria-hidden="true"><use href="#i-book"/></svg><div><strong>Kalibrasyon dosyası</strong><p>Baş açıları, iris oranları ve ekran noktaları; okuyabileceğiniz düz JSON. Görüntü yok.</p></div><span class="value"><strong>Sadece sayılar</strong></span></li>
           <li class="row"><svg aria-hidden="true"><use href="#i-eye-off"/></svg><div><strong>Gizlilik modu, duraklatma, kilitli ekran</strong><p>Kamera aygıtı bırakılır, webcam ışığı söner.</p></div><span class="value"><strong>Kamera kapalı</strong></span></li>
@@ -286,7 +286,7 @@
               <tr><th scope="row">Platformlar</th><td class="us">Windows, macOS 14+ (Apple silicon; Intel kaynaktan), Linux</td><td>macOS 14+ (Apple silicon ve Intel)</td></tr>
               <tr><th scope="row">Fiyat</th><td class="us">Ücretsiz, MIT lisansı</td><td>14,99 $ tek seferlik</td></tr>
               <tr><th scope="row">Kaynak kod</th><td class="us">Açık</td><td>Kapalı</td></tr>
-              <tr><th scope="row">Ağ kullanımı</th><td class="us">Varsayılan olarak yok</td><td>Lisans anahtarı ve günlük güncelleme kontrolü</td></tr>
+              <tr><th scope="row">Ağ kullanımı</th><td class="us">Yok</td><td>Lisans anahtarı ve günlük güncelleme kontrolü</td></tr>
               <tr><th scope="row">İzleme</th><td class="us">Baş pozu + iris noktaları</td><td>Baş pozu (+ paneller için göz konumu)</td></tr>
               <tr><th scope="row">Terminal ve editörlerde bölünmüş panel odağı</th><td class="us"><span class="mark yes"><svg aria-hidden="true"><use href="#i-yes"/></svg>Deneysel: Windows Terminal, tmux, WezTerm, Claude ve ChatGPT/Codex masaüstü uygulamaları (kod editörleri sırada)</span></td><td><span class="mark yes"><svg aria-hidden="true"><use href="#i-yes"/></svg>Var</span></td></tr>
               <tr><th scope="row">Fare kullanımından öğrenme</th><td class="us"><span class="mark yes"><svg aria-hidden="true"><use href="#i-yes"/></svg>Var</span></td><td><span class="mark yes"><svg aria-hidden="true"><use href="#i-yes"/></svg>Var (tıklamalardan)</span></td></tr>

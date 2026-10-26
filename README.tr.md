@@ -13,7 +13,7 @@
   <a href="https://github.com/bugraskl/eye-tracker/actions/workflows/ci.yml"><img src="https://github.com/bugraskl/eye-tracker/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://github.com/bugraskl/eye-tracker/releases"><img src="https://img.shields.io/github/v/release/bugraskl/eye-tracker" alt="Son sürüm"></a>
   <a href="docs/platform-support.md"><img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-6366F1" alt="Windows, macOS, Linux"></a>
-  <a href="docs/privacy.md"><img src="https://img.shields.io/badge/network-off%20by%20default%20(verified%20in%20CI)-22D3EE" alt="Varsayılan olarak ağ erişimi yok, CI'da doğrulanıyor"></a>
+  <a href="docs/privacy.md"><img src="https://img.shields.io/badge/network-none%20(verified%20in%20CI)-22D3EE" alt="Varsayılan olarak ağ erişimi yok, CI'da doğrulanıyor"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT Lisansı"></a>
 </p>
 
@@ -73,10 +73,7 @@ henüz kod imzalı değildir; Gatekeeper ve SmartScreen için tek seferlik adım
 kullanıcı profilinizde saklar; her şeyi seçtiğiniz bir klasörde tutmak için onu
 `--config-dir KLASÖR` ile başlatın.
 
-**Güncelleme.** Windows'ta kurulu bir kopya kendini güncelleyebilir: **Ayarlar → Genel → Güncellemeler**'i
-açın; uygulama günde bir kez GitHub'a bakar, yeni sürümü bildirir ve siz onaylayınca kurar (kapalıyken de tepsi
-menüsündeki **Güncellemeleri denetle…** çalışır). Ağı kullanan tek şey olduğu için varsayılan olarak kapalıdır;
-[ne gönderdiği](docs/privacy.md#the-update-check-opt-in). Diğer sistemlerde yeni sürümü sürümler sayfasından alın.
+**Güncelleme.** Güncelleme kontrolü yoktur: yeni sürümleri sürümler sayfasından alın.
 
 ## Hızlı başlangıç
 
@@ -138,7 +135,7 @@ Ayrıntılar: [mimari](docs/architecture.md) (İngilizce).
 
 | Söz | Nasıl doğrulanıyor |
 |---|---|
-| Varsayılan olarak ağ erişimi yok: telemetri ve hesap yok. Ağı kullanabilen tek şey, kendinizin açtığınız güncelleme kontrolüdür (Windows, varsayılan olarak kapalı): günde bir kez `api.github.com`'a, hiçbir kimlik bilgisi taşımayan bir HTTPS isteği. | Kaynak kod taraması, tek bir gözden geçirilmiş istisna dışında ağ kodu bulunursa CI'ı başarısız kılar. Her sürüm derlemesi ve paketlemeyi ya da bağımlılıkları değiştiren her çekme isteği de taranır: paketlenen her yerel kütüphane ve Python modülü. |
+| Ağ erişimi yok: telemetri, hesap ve güncelleme kontrolü yok. | Kaynak kod taraması, herhangi bir ağ kodu bulunursa istisnasız CI'ı başarısız kılar. Her sürüm derlemesi ve paketlemeyi ya da bağımlılıkları değiştiren her çekme isteği de taranır: paketlenen her yerel kütüphane ve Python modülü. |
 | Kamera kareleri bellekte analiz edilir, asla kaydedilmez. | Kaynak kod taraması, OpenCV'nin görüntü ve video yazıcılarında (`imwrite`, `imencode`, `VideoWriter`) CI'ı başarısız kılar; geri kalanı kod incelemesine bırakılır. |
 | Sadece sayılar saklanır: baş açıları, iris oranları, ekran noktaları. | `calibration.json` düz bir JSON dosyasıdır. |
 | Gizlilik modu, duraklatma ve kilitli ekran kamerayı bırakır. | Webcam ışığı söner. |
@@ -229,7 +226,7 @@ Bu proje Glance Switch'ten ilham aldı. Karşılaştırma, [glanceswitch.com](ht
 | Platformlar | Windows, macOS 14+ (Apple silicon; Intel için kaynaktan), Linux | macOS 14+ (Apple silicon ve Intel) |
 | Fiyat | Ücretsiz, MIT lisansı | 14,99 $ tek seferlik |
 | Kaynak kod | Açık | Kapalı |
-| Ağ kullanımı | Varsayılan olarak yok; güncelleme kontrolü yalnızca siz açarsanız | Lisans anahtarı kontrolü + günlük güncelleme kontrolü |
+| Ağ kullanımı | Yok | Lisans anahtarı kontrolü + günlük güncelleme kontrolü |
 | İzleme | Baş pozu + iris noktaları | Baş pozu (+ paneller için göz konumu) |
 | Terminal ve editörlerde bölünmüş panel odağı | Deneysel: terminaller, Claude ve ChatGPT/Codex masaüstü uygulamaları | ✅ |
 | Fare kullanımından öğrenme | ✅ | ✅ (tıklamalardan) |

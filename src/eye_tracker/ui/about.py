@@ -36,10 +36,8 @@ COPYRIGHT = "© 2026 Buğra Şıkel and contributors · MIT License"
 #: code; some libraries it ships contain networking code it never uses.
 PRIVACY_STATEMENT = (
     "Everything runs on this computer. Camera frames are analysed in memory and are "
-    "never saved, uploaded or shared. The app uses the network only for the update "
-    "check, which is off unless you turn it on (Windows): one request to GitHub, at most "
-    "once a day, that carries nothing about you. Apart from that, Eye Tracker's own code "
-    "contains no network code; some libraries it ships contain networking code it does "
+    "never saved, uploaded or shared. Eye Tracker's own code contains no network "
+    "code; some libraries it ships contain networking code it does "
     "not use, and every release build is checked for it (see the privacy "
     "documentation). Only numbers are stored: your settings and the calibration "
     "(head-pose and eye measurements with the positions of the calibration dots). The "

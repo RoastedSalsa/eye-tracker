@@ -6,6 +6,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ## [Unreleased]
 
+### Removed
+
+- The update check and in-app update (Windows). The app contains no networking code at all now;
+  `scripts/check_privacy.py` has no reviewed exception left, and the `updates.check` setting is gone
+  (settings files that still contain it keep loading). Take new versions from the releases page.
+
 ## [0.3.0] - 2026-10-02
 
 ### Added

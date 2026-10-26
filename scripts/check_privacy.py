@@ -59,10 +59,8 @@ reports:
 ``syntax-error``
     A file that cannot be parsed, and therefore cannot be verified.
 
-The one reviewed exception is the opt-in update check: ``update/winhttp.py`` may
-load ``winhttp.dll`` through ctypes (``native-network`` only; see
-:data:`SOURCE_ALLOWLIST`). Every other rule still applies to that file, and the
-rule applies to no other file. It is reported as a notice on every run.
+There is no reviewed exception: :data:`SOURCE_ALLOWLIST` is empty, and the
+mechanism stays so that a future one has to be named, with a reason, in review.
 
 Frozen bundle (``--bundle DIR``)
 ================================
@@ -182,15 +180,7 @@ class SourceAllowRule:
 #: The reviewed exceptions of the source check. Keep this list as short as it is:
 #: each entry is a place where the app talks to the network, which its privacy
 #: promise (README, docs/privacy.md) has to name.
-SOURCE_ALLOWLIST: tuple[SourceAllowRule, ...] = (
-    SourceAllowRule(
-        "update/winhttp.py",
-        frozenset({"native-network"}),
-        "the opt-in update check (off by default): one HTTPS GET a day to GitHub's release "
-        "address through Windows' own WinHTTP, with the host and the size of every request "
-        "checked by update/fetch.py; sends no identifier",
-    ),
-)
+SOURCE_ALLOWLIST: tuple[SourceAllowRule, ...] = ()
 
 #: Top-level modules that exist to talk to the network (or only wrap it).
 NETWORK_MODULES: frozenset[str] = frozenset(
